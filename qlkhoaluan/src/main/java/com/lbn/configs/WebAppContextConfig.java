@@ -22,7 +22,9 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc // hien thuc mac dinh cua WebMvcConfigurer
 @EnableTransactionManagement
 @ComponentScan(basePackages = {
-    "com.lbn.controllers"
+    "com.lbn.controllers",
+    "com.lbn.repository",
+    "com.lbn.service"
 })
 public class WebAppContextConfig implements WebMvcConfigurer {
 
