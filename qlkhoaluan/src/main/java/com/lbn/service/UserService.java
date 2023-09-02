@@ -4,13 +4,23 @@
  */
 package com.lbn.service;
 
-import com.lbn.pojo.Users;
 import java.util.List;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+import com.lbn.pojo.Users;
 
 /**
  *
  * @author DELL
  */
-public interface UserService {
+public interface UserService extends UserDetailsService {
     List<Users> getUsers();
+
+    boolean addUser(Users user);
+
+    // User getUserByUserName(String username);
+    List<Users> getUsers(String name);
+
+    Users getUserByUsername(String username);
 }

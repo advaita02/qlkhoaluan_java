@@ -4,8 +4,9 @@
  */
 package com.lbn.repository;
 
-import com.lbn.pojo.Users;
 import java.util.List;
+
+import com.lbn.pojo.Users;
 
 /**
  *
@@ -13,4 +14,11 @@ import java.util.List;
  */
 public interface UserRepository {
     List<Users> getUsers();
+
+    boolean addUser(Users user);
+
+    // User getUserByUserName(String username);
+    List<Users> getUsers(String username);
+
+    Users getUserByUsername(String username);
 }
